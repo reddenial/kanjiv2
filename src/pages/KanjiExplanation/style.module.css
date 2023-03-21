@@ -33,6 +33,10 @@
     font-size: 12px;
 }
 
+.img img {
+    max-width: 100%;
+}
+
 .kanji {
     color: #c48b58;
     font-weight: bold;
