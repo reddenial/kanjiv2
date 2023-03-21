@@ -22,6 +22,7 @@ export function App() {
     return (
 		<div className="container App">
 			<Outlet />
+			<footer>&copy; Daniel Rojas - 2023</footer>
 		</div>
     );
 }

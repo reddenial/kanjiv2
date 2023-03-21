@@ -8,3 +8,8 @@
 .search_container {
     margin: 20px 0 0;
 }
+
+.logo {
+    margin-top: 20px;
+    max-width: 120px;
+}

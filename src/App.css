@@ -18,3 +18,14 @@ h1, h2, h3, h4, h5, h6, p {
 a:hover {
     text-decoration: none;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    background-color: #EEEEEE;
+    border-top: 1px solid #9F9F9F;
+}

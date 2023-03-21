@@ -9,7 +9,7 @@ import kanjiwords from '../../assets/images/kanjiwords.jpg';
 export function KanjiExplanation(props) {
     return (
         <div className={s.container}>
-            <h2 className={s.title}>What is Kanji?</h2>
+            <h2 className={s.title}>What is a kanji?</h2>
             <p className={s.content}><span class={s.kanji}>Kanji <span>漢字</span></span> are Japanese characters, and one of three writing systems in Japanese. The other two are <span class={s.hiragana}>hiragana <span>ひらがな</span></span> and <span class={s.katakana}>katakana <span>カタカナ</span></span>, collectively called kana.</p>
             <figure className={s.img}>
                 <img src={sentence} title="sentence" alt="sentence" />
