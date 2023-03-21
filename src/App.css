@@ -7,4 +7,14 @@ html, body {
     padding: 0;
     background-color: #EEEEEE;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url('assets/images/background.png');
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 1em;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
 }

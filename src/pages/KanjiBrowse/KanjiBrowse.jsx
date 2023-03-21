@@ -1,34 +1,26 @@
-import { useEffect, useState } from 'react';
-import { KanjiAPI } from '../../api/kanji-api';
-import { KanjiList } from '../../components/KanjiList/KanjiList';
+import { KanjiList } from '../../containers/KanjiList/KanjiList';
 import { SearchInput } from '../../components/SearchInput/SearchInput';
 import s from './style.module.css';
+import { useSelector } from 'react-redux';
 
 export function KanjiBrowse(props) {
-    const [kanjiList, setKanjiList] = useState();
 
-    async function fetchAllKanjis() {
-        try {
-            const data = await KanjiAPI.fetchKanjiList();
-
-            if (data.length > 0) {
-                setKanjiList(data);
-            }
-        } catch (error) {
-            alert('Erreur durant la recherche des kanjis.');
-        }
-    }
-
-    useEffect(() => {
-        fetchAllKanjis();
-    }, [])
+    const searchTerm = useSelector(store => store.KANJI.searchInput);
+    const kanjiList = useSelector(store => store.KANJI.kanjiList);
+    const filterType = useSelector(store => store.KANJI.filterType);
 
     return (
         <div className={s.container}>
             <div className={s.search_container}>
-                <SearchInput />
+                <SearchInput 
+                    filterType={filterType}
+                />
             </div>
-            <KanjiList kanjiList={kanjiList} />
+            <KanjiList 
+                kanjiList={kanjiList}
+                searchTerm={searchTerm}   
+                filterType={filterType}
+            />
         </div>
     )
 }

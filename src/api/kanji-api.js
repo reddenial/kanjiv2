@@ -10,7 +10,8 @@ const options = {
 };
 
 export class KanjiAPI {
-    static async fetchKanjiList(){
+    static async fetchAllKanji(){
+
         options.url = `${BASE_URL}/kanji/all`;
 
         const response_ = await axios.request(options).then(function (response) {
@@ -18,5 +19,43 @@ export class KanjiAPI {
         });
 
         return response_;
+    }
+
+    static async getKanjiByWord(word) {
+        const data = await this.fetchAllKanji();
+
+        word.trim().toLowerCase();
+
+        const filteredResult = data.filter(kanji => kanji.kanji.meaning.english.split(',').includes(word));
+
+        return filteredResult;
+    }
+
+    static async getKanjiByCharacter(character) {
+        const data = await this.fetchAllKanji();
+
+        character.trim().toLowerCase();
+
+        const filteredResult = data.filter(kanji => kanji.kanji.character === character);
+
+        return filteredResult;
+    }
+
+    static async getKanjiByPrononciation(prononciation) {
+        const data = await this.fetchAllKanji();
+
+        prononciation.trim().toLowerCase();
+
+        const filteredResult = data.filter(kanji => kanji.kanji.kunyomi.romaji.split(',').includes(prononciation) || kanji.kanji.onyomi.romaji.split(',').includes(prononciation));
+
+        return filteredResult;
+    }
+
+    static async getKanjiByGrade(grade){
+        const data = await this.fetchAllKanji();
+
+        const filteredResult = data.filter(kanji => kanji.references.grade === grade);
+
+        return filteredResult;        
     }
 }

@@ -43,13 +43,7 @@
     background-color: #3A98B9;
     border: 1px solid #3A98B9;
     border-radius: 8px;
-    cursor: pointer;
     transition: 0.5s all ease-in;
-}
-
-.kanji_grade:hover {
-    color: #3A98B9;
-    background-color: #FFFFFF;
 }
 
 .kanji_kodansha {
