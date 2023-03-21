@@ -1,7 +1,8 @@
 import { KanjiList } from '../../containers/KanjiList/KanjiList';
-import { SearchInput } from '../../components/SearchInput/SearchInput';
+import { SearchInput } from '../../containers/SearchInput/SearchInput';
 import s from './style.module.css';
 import { useSelector } from 'react-redux';
+import { Footer } from '../../components/Footer/Footer';
 
 export function KanjiBrowse(props) {
 
@@ -21,6 +22,7 @@ export function KanjiBrowse(props) {
                 searchTerm={searchTerm}   
                 filterType={filterType}
             />
+            <Footer />
         </div>
     )
 }

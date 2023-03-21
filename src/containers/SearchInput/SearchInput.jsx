@@ -1,11 +1,11 @@
 import s from './style.module.css';
 import { Search as SearchIcon } from 'react-bootstrap-icons';
-import { ButtonPrimary } from '../ButtonPrimary/ButtonPrimary';
+import { ButtonPrimary } from '../../components/ButtonPrimary/ButtonPrimary';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setFilterType, setSearchInput } from '../../store/kanji/kanji-slice';
 import { useState } from 'react';
-import { Filters } from '../Filters/Filters';
+import { Filters } from '../../components/Filters/Filters';
 
 export function SearchInput({ filterType }) {
     const [search, setSearch] = useState('');

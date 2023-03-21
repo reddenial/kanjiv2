@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { Play, PlayCircleFill as PlayIcon } from 'react-bootstrap-icons';
+import { PlayCircleFill as PlayIcon } from 'react-bootstrap-icons';
 
 import s from './style.module.css';
 

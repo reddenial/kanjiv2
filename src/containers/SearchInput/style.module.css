@@ -6,13 +6,36 @@
 }
 
 .input_container {
+    position: relative;
     display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+@media screen and (max-width:700px) {
+    .input_container {
+        display: block;
+        width: calc(100% - 100px);
+    }
+
+    .input_container button {
+        display: block;
+        margin: 12px auto 20px;
+    }
+}
+
+@media screen and (max-width:492px) {
+    .input_container {
+        display: block;
+        width: calc(80% - 100px);
+    }
 }
 
 .icon {
     position: absolute;
-    margin-left: 25px;
-    margin-top: 12px;
+    top: 12px;
+    left: 40px;
     color: #b8b8b8;
 }
 
