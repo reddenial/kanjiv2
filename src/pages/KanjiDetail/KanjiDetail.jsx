@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { Footer } from '../../components/Footer/Footer';
 import { KanjiSingle } from '../../containers/KanjiSingle/KanjiSingle';
 import { SearchInput } from '../../containers/SearchInput/SearchInput';
 import s from './style.module.css';
@@ -16,7 +15,6 @@ export function KanjiDetail(props) {
                 />
             </div>
             <KanjiSingle />
-            <Footer />
         </div>
     )
 }

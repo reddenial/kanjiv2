@@ -6,7 +6,6 @@ import s from './style.module.css';
 import { Link } from 'react-router-dom';
 import { InfoCircleFill as InfoIcon } from 'react-bootstrap-icons';
 import { useSelector } from 'react-redux';
-import { Footer } from '../../components/Footer/Footer';
 
 export function Home(props){
 
@@ -22,7 +21,6 @@ export function Home(props){
                 />
             </div>
             <span className={s.note}><span className={s.icon}><InfoIcon /></span> If you don't know what a kanji is. Read this <Link to="/about-kanji/">explanation</Link>.</span>
-            <Footer />
         </div>
     )
 }
