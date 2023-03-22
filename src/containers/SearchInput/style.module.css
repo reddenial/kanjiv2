@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .input_container {
@@ -16,7 +17,6 @@
 @media screen and (max-width:700px) {
     .input_container {
         display: block;
-        width: calc(100% - 100px);
     }
 
     .input_container button {
@@ -28,7 +28,6 @@
 @media screen and (max-width:492px) {
     .input_container {
         display: block;
-        width: calc(80% - 100px);
     }
 }
 
