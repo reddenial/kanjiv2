@@ -28,6 +28,7 @@
 @media screen and (max-width:492px) {
     .input_container {
         display: block;
+        padding: 0;
     }
 }
 
@@ -42,6 +43,7 @@
     height: 50px;
     margin-right: 20px;
     padding-left: 70px;
+    padding-right: 20px;
     width: 100%;
     border-color: transparent;
     border: 3px solid transparent;
